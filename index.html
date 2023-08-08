@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reCaptcha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Login or Signup</h2>
+        <div id="loginForm">
+          <form>
+            <div class="input-group">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="button">Login</button>
+         <div class="g-recaptcha" data-sitekey="6LcK640nAAAAADYu7TIXBfcgWVlv2HQHprv6SFMv"></div>
+
+            <p>Don't have an account? <a href="#" id="createAccountLink">Create Account</a></p>
+          </form>
+        </div>
+        
+        <div id="signupForm" style="display: none;">
+          <form>
+            <div class="input-group">
+              <label for="signupUsername">Email:</label>
+              <input type="text" id="signupUsername" name="signupUsername" required>
+            </div>
+            <div class="input-group">
+              <label for="signupName">Password:</label>
+              <input type="text" id="signupName" name="signupName" required>
+            </div>
+            <div class="input-group">
+              <label for="signupPassword">Password:</label>
+              <input type="password" id="signupPassword" name="signupPassword" required>
+            </div>
+            <button type="submit" class="button">Create Account</button>
+            <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+          </form>
+        </div>
+      </div>
+
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <script src="logic.js"></script>
+</body>
+</html>
