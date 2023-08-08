@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reCaptcha</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+      var onloadCallback = function() {
+        grecaptcha.render('captcha', {sitekey:'6LeZTo4nAAAAAIy9QW04VJ4k0GlhozKtlS3Mkd7Q' , 
+      //callback
+      });
+      }
+    </script>
 </head>
 <body>
     
@@ -21,7 +28,7 @@
               <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" class="button">Login</button>
-            <div class="g-recaptcha" data-sitekey="6LeZTo4nAAAAAIy9QW04VJ4k0GlhozKtlS3Mkd7Q"></div>
+            <div id="captcha" class="g-recaptcha" data-sitekey="6LeZTo4nAAAAAIy9QW04VJ4k0GlhozKtlS3Mkd7Q"></div>
             
             <p>Don't have an account? <a href="#" id="createAccountLink">Create Account</a></p>
           </form>
